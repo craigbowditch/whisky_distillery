@@ -8,4 +8,6 @@ public interface DistilleryRepositoryCustom {
 
 
     List<Distillery> getAllDistilleriesByRegion(String region);
+
+    List<Distillery> getAllDistilleriesWith12YearOldWhisky();
 }

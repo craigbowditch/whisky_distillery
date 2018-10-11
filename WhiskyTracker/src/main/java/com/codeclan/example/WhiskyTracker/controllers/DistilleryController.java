@@ -22,4 +22,9 @@ public class DistilleryController {
         return distilleryRepository.getAllDistilleriesByRegion(region);
     }
 
+    @GetMapping(value = "/age/12")
+    public List<Distillery> findDistilleriesByAge(){
+        return distilleryRepository.getAllDistilleriesWith12YearOldWhisky();
+    }
+
 }
