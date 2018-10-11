@@ -1,5 +1,6 @@
 package com.codeclan.example.WhiskyTracker;
 
+import com.codeclan.example.WhiskyTracker.models.Distillery;
 import com.codeclan.example.WhiskyTracker.models.Whisky;
 import com.codeclan.example.WhiskyTracker.repositories.DistilleryRepository.DistilleryRepository;
 import com.codeclan.example.WhiskyTracker.repositories.WhiskyRepository.WhiskyRepository;
@@ -29,7 +30,9 @@ public class WhiskyTrackerApplicationTests {
 
 	@Test
 	public void canGetWhiskyByYear(){
-		List<Whisky> whiskiesByYear = whiskyRepository.getAllWhiskiesByYear(2018);
+//		List<Whisky> whiskiesByYear = whiskyRepository.getAllWhiskiesByYear(2018);
+		Distillery distillery = new Distillery("Macallan", "Speyside");
+		List<Whisky> anniversaryMalt = whiskyRepository.getAllWhiskiesByDistilleryAndAge("Macallan", 25);
 	}
 
 }
